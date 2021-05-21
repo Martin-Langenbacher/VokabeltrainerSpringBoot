@@ -1,0 +1,27 @@
+{
+	"info": {
+		"_postman_id": "886990de-ea1c-4bdf-a435-e54322aafb2d",
+		"name": "VokabelTrainer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GetAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "AddVokabel",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		}
+	]
+}
