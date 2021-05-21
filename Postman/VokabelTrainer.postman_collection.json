@@ -10,7 +10,17 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": null
+				"url": {
+					"raw": "http://localhost:8080/vokabel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vokabel"
+					]
+				}
 			},
 			"response": []
 		},
@@ -19,7 +29,26 @@
 			"request": {
 				"method": "POST",
 				"header": [],
-				"url": null
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"word\": \"Sonne\",\n    \"translation\": \"sun\",\n    \"bemerkung\": \"Das erste Sonne.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/vokabel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"vokabel"
+					]
+				}
 			},
 			"response": []
 		}
