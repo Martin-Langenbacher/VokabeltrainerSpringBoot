@@ -11,3 +11,18 @@ public class VokabeltrainerApplication {
 	}
 
 }
+
+
+
+/*
+
+Link Tipps (ältere Projekte):
+
+1) Bookstore:
+https://github.com/WCS-Java-Training-Bonn-2019/spring-bookstore/blob/master/src/main/resources/templates/book/get_all.html
+
+2) SkillHub:
+https://github.com/WCS-Java-Training-Bonn-2019/skill-hub/blob/master/src/main/resources/templates/users/get_by_skill.html
+
+
+ */
