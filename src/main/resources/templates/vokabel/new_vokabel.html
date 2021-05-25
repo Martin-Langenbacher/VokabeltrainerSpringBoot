@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<!--
+<head>
+    <meta charset="UTF-8">
+    <title>Liste aller Vokabeln</title>
+</head> -->
+
+<head th:replace="fragments.html :: head"></head>
+
+<body>
+
+<header th:replace="fragments.html :: top">Here goes the header</header>
+
+<main>
+
+    <h1>Neue Vokabel anlegen</h1>
+
+    <form action="/vokabel" method="post">
+        <div class="form-group">
+            <label for="wort_input">Wort</label>
+            <input type="text" class="form-control" id="wort_input" placeholder="Haus">
+        </div>
+        <div class="form-group">
+            <label for="uebersetzung_input">Übersetzung</label>
+            <input type="text" class="form-control" id="uebersetzung_input" placeholder="House">
+        </div>
+        <div class="form-group">
+            <label for="bemerkung_input">Bemerkung</label>
+            <textarea class="form-control" id="bemerkung_input" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Speichern</button>
+    </form>
+
+
+</main>
+
+<footer th:replace="fragments.html :: bottom">Here goes the footer</footer>
+
+</body>
+</html>

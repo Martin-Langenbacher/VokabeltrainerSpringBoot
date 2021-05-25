@@ -13,7 +13,7 @@ public class Vokabel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String word;
     private String translation;
     private String bemerkung;
