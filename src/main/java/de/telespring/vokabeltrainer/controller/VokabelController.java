@@ -2,6 +2,7 @@ package de.telespring.vokabeltrainer.controller;
 
 import de.telespring.vokabeltrainer.model.Vokabel;
 import de.telespring.vokabeltrainer.repository.VokabelRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -16,6 +17,7 @@ import java.util.List;
 
 @Controller
 @RequestMapping("/vokabel")
+@Slf4j
 public class VokabelController {
 
 
@@ -34,20 +36,13 @@ public class VokabelController {
 
 
     @PostMapping(consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
-    @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<Vokabel> addVokabel (@RequestBody Vokabel vokabel) {
-        return new ResponseEntity<>(this.vokabelRepository.save(vokabel), HttpStatus.CREATED);
+    //@ResponseStatus(HttpStatus.CREATED) --> Wenn dies drin ist, dann wird die Seite nicht richtig angezeigt, da 'redirect' überschrieben wird!
+    public String addVokabel( Vokabel vokabel ){
+        this.vokabelRepository.save(vokabel);
+        log.info("Wir haben gerade eine Vokabel gespeichert: @Slf4j wird benötigt!");
+        System.out.println("=============> System.out.println-Test. <xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx");
+        return "redirect:/getAll";
     }
-
-
-    /*
-        @PostMapping("vokabel/upsert")
-    public String insert(@Valid Vokabel vokabel, BindingResult bindingResult, Model model) {
-        vokabel = vokabelRepository.save(vokabel);
-        return "vokabel/get_all";
-    }
-
-     */
 
 
     // Neues Wort anlegen

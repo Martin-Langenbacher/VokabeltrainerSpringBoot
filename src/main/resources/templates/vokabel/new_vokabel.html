@@ -19,15 +19,15 @@
     <form action="/vokabel" method="post">
         <div class="form-group">
             <label for="wort_input">Wort</label>
-            <input type="text" class="form-control" id="wort_input" placeholder="Haus">
+            <input type="text" class="form-control" id="wort_input" placeholder="Haus" name="word">
         </div>
         <div class="form-group">
             <label for="uebersetzung_input">Übersetzung</label>
-            <input type="text" class="form-control" id="uebersetzung_input" placeholder="House">
+            <input type="text" class="form-control" id="uebersetzung_input" placeholder="House" name="translation">
         </div>
         <div class="form-group">
             <label for="bemerkung_input">Bemerkung</label>
-            <textarea class="form-control" id="bemerkung_input" rows="3"></textarea>
+            <textarea class="form-control" id="bemerkung_input" rows="3" name="bemerkung"></textarea>
         </div>
         <button type="submit" class="btn btn-primary">Speichern</button>
     </form>
@@ -39,3 +39,30 @@
 
 </body>
 </html>
+
+
+
+<!-- =====================   Löschen   ===================== -->
+
+<!--
+ <form enctype="multipart/form-data" action="#" th:action="@{/book/upsert}" th:object="${book}" method="post">
+     <input th:field="*{id}" type="hidden">
+
+     <div class="form-group">
+             <label for="user-first-name">First name</label><input type="text" class="form-control" id="firstName"
+               name="firstName" placeholder="Stephanie" required th:field="*{firstName}">
+           </div>
+
+ -->
+
+<!-- <form action="/vokabel" method="post">
+<form action="#" th:action="@{/vokabel/upsert}" th:object="${vokabel}" method="post"> -->
+
+
+
+
+
+
+
+
+
