@@ -17,6 +17,8 @@ import java.util.List;
 @Slf4j                                     // Für Logger.
 public class TrainingController {
 
+    // TODO: Change it to a variable, the user can change (e.g. 10, 15, ... - 50) 
+    private static final int AMOUNT_OF_VOCABLUARYS_IN_TRAINING = 5;
     private final VokabelRepository vokabelRepository;
 
     @Autowired
@@ -31,7 +33,10 @@ public class TrainingController {
         if (vokabelList.isEmpty()) {
             return "redirect:/vokabel/new";
         }
-        if (Integer.valueOf(counter) <= 5) {
+        // Loop only if either the amount of vocabluaries are not matched or the lenth of the vocabluary-list is not exceeded !
+        if (Integer.valueOf(counter) < AMOUNT_OF_VOCABLUARYS_IN_TRAINING && vokabelList.size() - Integer.valueOf(counter) > 0) {
+
+            System.out.println("+++++++++++++++++++++" + counter + " Size: " +vokabelList.size());
             model.addAttribute("vokabel", vokabelList.get(Integer.valueOf(counter)));
             model.addAttribute("counter", Integer.valueOf(counter) + 1);
         } else {
@@ -39,6 +44,28 @@ public class TrainingController {
         }
         return "training/training";
     }
+
+
+
+
+    /*
+    @GetMapping("/{counter}")
+    public String training (Model model, @PathVariable(value = "counter", required = false) String counter) {
+        List<Vokabel> vokabelList = vokabelRepository.findAll();
+        // System.out.println("+++++++++++++++++++++" + vokabelList.size());
+        if (vokabelList.isEmpty() || vokabelList.size() < 10) {
+            return "redirect:/vokabel/new";
+        }
+        if (Integer.valueOf(counter) <= 10) {
+            model.addAttribute("vokabel", vokabelList.get(Integer.valueOf(counter)));
+            model.addAttribute("counter", Integer.valueOf(counter) + 1);
+        } else {
+            return "redirect:/training/ergebnis";
+        }
+        return "training/training";
+    }
+
+    */
 
 
     @GetMapping("/ergebnis")
