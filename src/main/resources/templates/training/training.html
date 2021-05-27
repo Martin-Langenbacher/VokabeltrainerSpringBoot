@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<!--
+<head>
+    <meta charset="UTF-8">
+    <title>Liste aller Vokabeln</title>
+</head> -->
+
+<head th:replace="fragments.html :: head"></head>
+
+<body>
+
+<header th:replace="fragments.html :: top">Here goes the header</header>
+
+<main>
+
+    <h1>Vokabel Training</h1>
+
+    <form th:action="@{'/training/' + *{counter}}" method="get">
+        <input type="hidden" name="id" th:field="*{vokabel.id}">
+        <div class="form-group">
+            <label for="wort_input">Wort</label>
+            <input type="text" class="form-control" id="wort_input" placeholder="Haus" name="word" th:field="*{vokabel.word}" disabled>
+        </div>
+        <div class="form-group">
+            <label for="uebersetzung_input">Übersetzung</label>
+            <input type="text" class="form-control" id="uebersetzung_input" placeholder="Eingabe" name="translation">
+        </div>
+
+        <button type="submit" class="btn btn-primary">Weiter</button>
+    </form>
+
+
+</main>
+
+<footer th:replace="fragments.html :: bottom">Here goes the footer</footer>
+
+</body>
+</html>

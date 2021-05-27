@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/vokabel")
@@ -45,11 +46,29 @@ public class VokabelController {
     }
 
 
+
     // Neues Wort anlegen
     @GetMapping("/new")
     public String neueVokabelAnlagen() {
         return "vokabel/new_vokabel";
     }
+
+
+    @GetMapping("/edit/{id}")
+    public String editVokabel(Model model, @PathVariable("id") Long id) {
+        Optional<Vokabel> optinalVokabel = vokabelRepository.findById(id);
+        if (optinalVokabel.isPresent()) {
+            model.addAttribute("vokabel", optinalVokabel.get());
+            return "vokabel/edit_vokabel";
+        } else {
+            return "redirect:/getAll";
+        }
+    }
+
+
+
+
+
 
 
 

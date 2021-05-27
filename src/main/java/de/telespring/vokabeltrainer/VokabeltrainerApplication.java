@@ -24,5 +24,7 @@ https://github.com/WCS-Java-Training-Bonn-2019/spring-bookstore/blob/master/src/
 2) SkillHub:
 https://github.com/WCS-Java-Training-Bonn-2019/skill-hub/blob/master/src/main/resources/templates/users/get_by_skill.html
 
+3) REST in Spring:
+https://www.baeldung.com/spring-url-encoded-form-data
 
  */

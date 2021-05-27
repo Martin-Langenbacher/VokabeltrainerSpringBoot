@@ -34,9 +34,9 @@
             <td th:text="*{bemerkung}"></td>
 
 
-            <td><img th:src="@{'/book/' + *{id} + '/image'}"/></td>
+            <!-- <td><img th:src="@{'/book/' + *{id} + '/image'}"/></td>   -->
             <td>
-                <a th:href="@{'/book/edit/' + *{id}}" class="btn btn-primary btn-sm">Edit</a>
+                <a th:href="@{'/vokabel/edit/' + *{id}}" class="btn btn-primary btn-sm">Edit</a>
                 <a th:href="@{'/vokabel/delete/' + *{id}}" class="btn btn-danger btn-sm">Delete</a>
             </td>
         </tr>
