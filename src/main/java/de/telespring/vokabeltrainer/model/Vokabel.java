@@ -2,10 +2,8 @@ package de.telespring.vokabeltrainer.model;
 
 import lombok.Data;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 @Data
 @Entity
@@ -17,6 +15,11 @@ public class Vokabel {
     private String word;
     private String translation;
     private String bemerkung;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    @NotNull(message = "Es muss ein User ausgewählt werden.")
+    private User user;
 
 
 }

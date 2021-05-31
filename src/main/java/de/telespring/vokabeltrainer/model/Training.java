@@ -4,10 +4,7 @@ import lombok.Data;
 import org.springframework.format.annotation.DateTimeFormat;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -28,6 +25,11 @@ public class Training {
     private int amountOfVocabluaryCorrectlyAnsweredInTraining;
 
     // ArrayList<Vokabel> vokabelListeTraining = new ArrayList<Vokabel>(); // amount from int above...
+
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    @NotNull(message = "Es muss ein User ausgewählt werden.")
+    private User user;
 
 }
 
