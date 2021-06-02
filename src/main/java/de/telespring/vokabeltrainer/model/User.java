@@ -14,10 +14,10 @@ import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 
-//@Data
+@Data
 @Entity
-@Getter
-@Setter
+//@Getter
+//@Setter
 public class User {
 
     @Id
@@ -32,6 +32,10 @@ public class User {
 
     private int level; // Level wird durch viel Übung erhöht!
 
+
+
+
+    /*
     // Auszeichnungen
     @ManyToMany
     @JoinTable(name = "user_auszeichnung", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "auszeichnung_id"))
@@ -46,6 +50,13 @@ public class User {
     // User --> Vokabeln
     @OneToMany(mappedBy = "user", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Vokabel> vokabels = new ArrayList<>();
+
+    */
+
+
+
+
+
 
 
 

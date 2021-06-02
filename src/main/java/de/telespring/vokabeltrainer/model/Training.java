@@ -26,10 +26,15 @@ public class Training {
 
     // ArrayList<Vokabel> vokabelListeTraining = new ArrayList<Vokabel>(); // amount from int above...
 
+
+
+    /*
     @ManyToOne
     @JoinColumn(name = "user_id")
     @NotNull(message = "Es muss ein User ausgewählt werden.")
     private User user;
+
+     */
 
 }
 

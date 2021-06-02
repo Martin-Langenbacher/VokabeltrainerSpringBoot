@@ -16,10 +16,13 @@ public class Vokabel {
     private String translation;
     private String bemerkung;
 
+    /*
     @ManyToOne
     @JoinColumn(name = "user_id")
     @NotNull(message = "Es muss ein User ausgewählt werden.")
     private User user;
+
+     */
 
 
 }
