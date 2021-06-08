@@ -15,6 +15,26 @@ public class VokabeltrainerApplication {
 
 
 /*
+TODO:
+ 1) Auswertung vom Training: Vokabel richtig oder falsch
+ 2) Werte hochzählen, ...
+ 3) Ergebnis anzeigen...
+
+ 4) Verbesserung: Vokabelliste im Training auswählen --> Welche Vokabeln landen in der Trainingsliste (heute)
+
+ 5) Bekomme Auszeichnung
+ 6) if-s verbessern
+ 7) Verbindung von Trainings zu Auszeichnungen
+ 8) Einstellung: Wieviel Vokabeln pro Training
+
+ 9) Mogo-DB Umbau
+
+ */
+
+
+
+
+/*
 
 Link Tipps (ältere Projekte):
 

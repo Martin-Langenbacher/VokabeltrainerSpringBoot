@@ -1,5 +1,6 @@
 package de.telespring.vokabeltrainer.model;
 
+/*
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,7 +20,7 @@ public class Auszeichnung {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long auszeichnungId;
+    private Long id;
 
     private String nameDerAuszeichnung;
 
@@ -29,17 +30,20 @@ public class Auszeichnung {
 
     private boolean specialSingleAuszeichung;     // Wöchentliche Auszeichnungen: ==> false !
 
+/*
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @NotNull
+    //@NotNull
     private LocalDate startDateOfAuszeichnung;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @NotNull
+    //@NotNull
     private LocalDate endDateOfAuszeichnung;
 
     @DateTimeFormat(pattern = "yyyy-MM-dd")
-    @NotNull
+    //@NotNull
     private LocalDate achievementDateOfAuszeichnung;
+
+
 
     // Bild zur Auszeichnung: Achtung, eine z.B. Wöchentliche Auszeichnung gibt kein zusätzliches Bild sondern beim Bild gibt es eine Zahl, die größer wird.
     @Lob
@@ -50,7 +54,7 @@ public class Auszeichnung {
     @ManyToMany(mappedBy = "auszeichnungs", cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<User> users = new ArrayList<>();
 
-     */
+
 
 
 
@@ -58,7 +62,7 @@ public class Auszeichnung {
     // Auszeichung sollte in eine Liste des Users eingetragen werden - sobald er eine Auszeichnung geschafft hat...
 
 }
-
+*/
 
 /*
 

@@ -1,6 +1,6 @@
 package de.telespring.vokabeltrainer.controller;
-
-import de.telespring.vokabeltrainer.model.User;
+/*
+//import de.telespring.vokabeltrainer.model.User;
 import de.telespring.vokabeltrainer.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,6 +19,7 @@ public class UserController {
         this.userRepository = userRepository;
     }
 
+    /*
     @GetMapping
     public List<User> getAllUser() {
         return this.userRepository.findAll();
@@ -33,3 +34,4 @@ public class UserController {
 
 
 }
+*/

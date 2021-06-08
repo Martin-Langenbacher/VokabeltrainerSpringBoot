@@ -16,7 +16,7 @@
 
     <h1>Vokabel Training</h1>
 
-    <form th:action="@{'/training/' + *{counter}}" method="get">
+    <form th:action="@{'/training/' + *{tranings_id}}" method="get">
         <input type="hidden" name="id" th:field="*{vokabel.id}">
         <div class="form-group">
             <label for="wort_input">Wort</label>

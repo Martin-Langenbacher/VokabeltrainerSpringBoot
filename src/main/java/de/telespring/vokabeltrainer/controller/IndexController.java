@@ -1,8 +1,8 @@
 package de.telespring.vokabeltrainer.controller;
 
-import de.telespring.vokabeltrainer.model.User;
+//import de.telespring.vokabeltrainer.model.User;
 import de.telespring.vokabeltrainer.model.Vokabel;
-import de.telespring.vokabeltrainer.repository.UserRepository;
+//import de.telespring.vokabeltrainer.repository.UserRepository;
 import de.telespring.vokabeltrainer.repository.VokabelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -17,13 +17,19 @@ import java.util.List;
 public class IndexController {
 
     private final VokabelRepository vokabelRepository;
-    private final UserRepository userRepository;
+    //private final UserRepository userRepository;
 
     @Autowired
-    public IndexController(VokabelRepository vokabelRepository, UserRepository userRepository) {
+    //public IndexController(VokabelRepository vokabelRepository, UserRepository userRepository) {
+    public IndexController(VokabelRepository vokabelRepository) {
         this.vokabelRepository = vokabelRepository;
-        this.userRepository = userRepository;
+        //this.userRepository = userRepository;
     }
+
+
+
+
+
 
     @GetMapping("/getAll")                 // Pfad im Browser
     public String getAll(Model model) {
@@ -33,6 +39,8 @@ public class IndexController {
         return "vokabel/get_all";          // Ordner-Struktur in Templates
     }
 
+    /*
+
     @GetMapping("/getAllUsers")                 // Pfad im Browser
     public String getAllUsers(Model model) {
         List<User> alleUsers = userRepository.findAll();
@@ -40,6 +48,7 @@ public class IndexController {
         model.addAttribute("users", alleUsers);
         return "user/get_all_users";          // Ordner-Struktur in Templates
     }
+    */
 
 }
 

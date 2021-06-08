@@ -1,5 +1,6 @@
 package de.telespring.vokabeltrainer.controller;
 
+/*
 import de.telespring.vokabeltrainer.model.Auszeichnung;
 import de.telespring.vokabeltrainer.repository.AuszeichnungRepository;
 import lombok.extern.slf4j.Slf4j;

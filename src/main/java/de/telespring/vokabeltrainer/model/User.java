@@ -1,5 +1,6 @@
 package de.telespring.vokabeltrainer.model;
 
+/*
 import lombok.Data;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -26,9 +27,11 @@ public class User {
     private String userName;
     private String email;
 
+    /*
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     @NotNull
     private LocalDate dateOfRegistration;
+
 
     private int level; // Level wird durch viel Übung erhöht!
 
@@ -66,11 +69,11 @@ public class User {
 	@Builder.Default
 	@Setter(value = AccessLevel.NONE)
 	private Set<UserSkill> userSkills = new HashSet<>();
-    */
+
 
 
 }
-
+        */
 
 
 
